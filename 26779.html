@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="avrasm" dir="ltr">
+<head>
+  <title>
+      ks0066ulcdr.asm - Mikrocontroller.net
+  </title>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+	<link rel="stylesheet" media="all" href="/assets/screen-f55b8e55b5243a06d6f7e9e4b211bb7d2d8bd177285af2a5a29588f1724e79eb.css" />
+	<link rel="stylesheet" media="print" href="/assets/print-80f24115f86985d1d30d60a2b339bf75dbcaa308b178ae1f8f564dce91da9e1a.css" />
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="canonical" href="https://www.mikrocontroller.net/attachment/highlight/26779" />
+
+	<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="TRlHZeJ88cK1VvNgl2wDSeWAJpD4mHjArrKmFRLm3ZP+wuso3h6ADXC8YMwa0VXgetbxMa4UcVH3GxD9cM45bw==" />
+
+
+<style type="text/css">
+
+
+.flattr-link {display: none;}
+
+</style>
+
+<script type="text/javascript">
+  var user = eval("({\"name\":null,\"role\":null,\"posts_per_page\":500})");
+
+  var topic_read_times = {};
+  var post_votes = {};
+	var post_scores = {};
+</script>
+
+
+
+  <link rel="alternate" type="application/atom+xml" title="Mikrocontroller.net Newsfeed" href="/newsfeed" />
+
+  <!-- Forum Feeds -->
+  <link rel="alternate" type="application/atom+xml" title="Neue Beiträge in allen Foren" href="/feed/global" />
+  
+  
+  
+  <!-- / Forum Feeds -->
+
+    <meta name="robots" content="NOODP" />
+
+  <link rel="search" type="application/opensearchdescription+xml" title="Mikrocontroller.net" href="/searchplugin.xml" />
+
+<!--[if IE 7]><style>
+.gainlayout { zoom: 1;}
+</style><![endif]-->
+
+<!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"> -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<script src="/assets/application-437665fced489cca361a44b6c988d5256f514f1a98be7612fb3f1708dcd7a312.js"></script>
+
+  <script type="text/javascript">
+$( document ).ready(function() {
+  setTimeout(function() {
+    if ($('#sdfj391').is(':visible') && !$('#adliste').is(':visible')) {
+      if (parseInt(localStorage.getItem('adblock-notice-counter') || 0) > 5 && parseInt(localStorage.getItem('adblock-notice-counter') || 0) <= 14) {
+        $('#content').before('<div class="box">Lieber AdBlock-Nutzer, wir mögen störende, blinkende Flash-Anzeigen genauso wenig wie du. Deshalb zeigt Mikrocontroller.net ausschließlich nicht animierte Text- und Bildanzeigen an. Vielleicht möchtest du AdBlock für diese Seite deaktivieren? (Diese Meldung verschwindet automatisch nach ein paar Seitenaufrufen.)</div>');
+      }
+      if (typeof localStorage != 'undefined') {
+        localStorage.setItem('adblock-notice-counter', 1 + parseInt(localStorage.getItem('adblock-notice-counter') || 0));
+      }
+    }
+  }, 100);
+});
+  </script>
+
+<!--
+-->
+
+
+
+
+<!-- PUT THIS TAG IN THE head SECTION -->
+<script type='text/javascript'>
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+(function() {
+var gads = document.createElement('script');
+gads.async = true;
+gads.type = 'text/javascript';
+var useSSL = 'https:' == document.location.protocol;
+gads.src = (useSSL ? 'https:' : 'http:') + 
+'//www.googletagservices.com/tag/js/gpt.js';
+var node = document.getElementsByTagName('script')[0];
+node.parentNode.insertBefore(gads, node);
+})();
+</script>
+<!-- END OF TAG FOR head SECTION -->
+
+<script type="text/javascript">googletag.cmd.push(function() {//googletag.pubads().enableSingleRequest();
+googletag.pubads().setTargeting('site_id', '1');
+googletag.pubads().setTargeting('ssl', '1');
+});</script>
+
+<script>
+  if (location.hostname=='embdev.net') {
+    ga_subid = 7;
+  } else {
+    ga_subid = 1;
+  }
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80574-' + ga_subid, 'auto');
+
+  ga('set', 'dimension1', '');
+  ga('set', 'dimension2', 'Guest');
+
+  ga('send', 'pageview');
+
+</script>
+
+<!--
+<script type="text/javascript">
+var _paq = _paq || [];
+(function(){ var u="//www.mikrocontroller.net/piwik/";
+_paq.push(['setSiteId', 1]);
+_paq.push(['setTrackerUrl', u+'piwik.php']);
+_paq.push(['trackPageView']);
+_paq.push(['enableLinkTracking']);
+var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript'; g.defer=true; g.async=true; g.src=u+'piwik.js';
+s.parentNode.insertBefore(g,s); })();
+ </script>
+-->
+<meta name="google-translate-customization" content="5ced0b84f202ea5b-ae0c3756d2b00e02-g6a9f31b5bb528ccf-17"></meta>
+</head>
+
+<body>
+<div id="outer-container">
+    <div id="top"><h1><a href="/"><object data="/images/logo.svg" type="image/svg+xml">mikrocontroller.net</object></a></h1>
+<div id="hamburger">
+	<div></div>
+  <div></div>
+  <div></div>
+</div>
+
+</div>
+
+
+  <table id="twocolumns">
+  <tr><td id="sidebar-left" class="sidebar">
+  
+    <!-- begin nav -->
+<div class="nav-container">
+  <ul class="nav-first">
+    <li><b><a href="/">Home</a></b></li>
+    <li>
+      <b><a href="/articles/AVR">AVR</a></b>
+      <ul>
+        <li><a href="/articles/AVR-Tutorial">AVR-Tutorial</a></li>
+        <li><a href="/articles/AVR-GCC-Tutorial">AVR-GCC-Tutorial</a></li>
+      </ul>
+    </li>
+    <li>
+      <b><a href="/articles/ARM">ARM</a></b>
+      <ul>
+        <li><a href="/articles/LPC-Mikrocontroller">LPC</a></li>
+        <li><a href="/articles/STM32">STM32</a></li>
+        <li><a href="/articles/Infineon_XMC">XMC</a></li>
+      </ul>
+    </li>
+    <li>
+      <b><a href="/articles/MSP430">MSP430</a></b>
+    </li>
+    <li>
+      <b><a href="/articles/Programmierbare_Logik">FPGA, CPLD &amp; Co.</a></b>
+      <ul>
+        <li><a href="/articles/FPGA">Grundlagen zu FPGAs</a></li>
+        <li><a href="/articles/Hardwarebeschreibungssprachen">VHDL &amp; Co.</a></li>
+        <li><a href="/articles/Xilinx_ISE">Xilinx ISE</a></li>
+      </ul>
+    </li>
+    <li>
+      <b><a href="/articles/Digitale_Signalverarbeitung">DSP</a></b>
+    </li>
+
+    <li>
+      <b><a href="/articles/Elektronik_Allgemein">Elektronik allgemein</a></b>
+      <ul>
+        <li><a href="/articles/SMD_L%C3%B6ten">SMD L&ouml;ten</a></li>
+        <li><a href="/articles/Operationsverst%C3%A4rker-Grundschaltungen">Operationsverst&auml;rker</a></li>
+        <li><a href="/articles/Oszilloskop">Oszilloskop</a></li>
+      </ul> 
+    </li>
+
+    <li>
+      <b><a href="/forum/all">Forum</a></b>
+      <ul>
+        <li><a href="/forum/mikrocontroller-elektronik">&micro;C &amp; Elektronik</a></li>
+        <li><a href="/forum/analogtechnik">Analogtechnik</a></li>
+        <li><a href="/forum/fpga-vhdl-cpld">FPGA, VHDL &amp; Co.</a></li>
+        <li><a href="/forum/dsp">DSP</a></li>
+        <li><a href="/forum/gcc">Compiler &amp; IDEs</a></li>
+        <li><a href="/forum/codesammlung">Projekte &amp; Code</a></li>
+        <li><a href="/forum/markt">Markt</a></li>
+        <li><a href="/forum/platinen">Platinen</a></li>
+        <li><a href="/forum/mechanik">Mechanik &amp; Werkzeug</a></li>
+        <li><a href="/forum/hf">HF, Funk &amp; Felder</a></li>
+        <li><a href="/forum/hausbus">Haus &amp; Smart Home</a></li>
+        <li><a href="/forum/pc-programmierung">PC-Programmierung</a></li>
+        <li><a href="/forum/pc-hardware-software">PC Hard- &amp; Software</a></li>
+        <li><a href="/forum/ausbildung-studium-beruf">Ausbildung &amp; Beruf</a></li>
+        <li><a href="/forum/offtopic">Offtopic</a></li>
+        <li><a href="/forum/website">Webseite</a></li>
+       </ul>
+    </li>
+<!--    <li><b><a href="/buecher/">Buchtipps</a></b></li>-->
+<!--    <li><b><a href="http://shop.mikrocontroller.net/">Shop</a></b></li>-->
+<!--    <li><b><a href="/articles/Linksammlung">Linksammlung</a></b></li>-->
+    <li><b><a href="/articles/Hauptseite">Artikel&uuml;bersicht</a></b></li>
+    <li><b><a href="/articles/Spezial:Recentchanges">Letzte &Auml;nderungen</a></b></li>
+  </ul>
+</div>
+<!-- end nav -->
+
+
+<div id="adliste" class="adtxt adunit bannerad"></div>
+<div id="sdfj391"></div>
+
+<hr />
+<div id="first-adframe" class="adframe sticky" style="padding: 0;margin:0; text-align: center; width:160px;">
+  <!-- <div style="font-size: 0.65em;">- Anzeige -</div> -->
+  <!-- bannerstart -->
+    <script>
+//<![CDATA[
+
+        document.write("<div style=\"padding: 0; text-align: center; width:160px;\">");
+        document.write(decodeURIComponent('%3Cdiv%20class=%22ad%22%20style=%22min-width:%201px;%22id=%22div-gpt-ad-bzqfvold%22%3E%3C/div%3E'));googletag.cmd.push(function() {if ($("#div-gpt-ad-bzqfvold").is(":hidden")) return;slot = googletag.defineSlot('/62616433/Mikrocontroller_Left_Sidebar_1', [160, 600], 'div-gpt-ad-bzqfvold');slot.addService(googletag.pubads());slot.set('adsense_channel_ids', '7311337829,3539755804+5150403961');
+slot.set('adsense_border_color', 'ffa500');
+slot.set('adsense_background_color', 'ffeebb');
+slot.set('adsense_link_color', '000000');
+slot.set('adsense_url_color', '000000');
+slot.set('adsense_text_color', '333333');
+googletag.enableServices();googletag.display('div-gpt-ad-bzqfvold');
+});
+        document.write("<\/div>");
+
+//]]>
+</script>  <!-- bannerend -->
+  </div>
+  <div style="padding-top: 10px;"></div>
+
+
+  </td>
+  <td id="main">
+
+<div id="container">
+    <!-- contentDetection start --> 
+    <!-- google_ad_section_start -->
+			<h1 id="pageName" style="float: left;">ks0066ulcdr.asm</h1>
+
+
+  <br style="clear: both;" />
+  
+
+  <div id="nav-top"><div class="navbar">
+  <span class="left">
+    <span class="menuitem "><a class="nav" href="/forum">Forenliste</a></span> <span class="menuitem "><a class="nav" href="/topic/new">Neuer Beitrag</a></span> <span class="menuitem "><a class="nav" href="/search">Suchen</a></span> <span class="menuitem "><a class="nav" href="/user/register">Anmelden</a></span> <span class="menuitem "><a class="nav" href="/user/list">Benutzerliste</a></span> <span class="menuitem "><a class="nav" href="/attachment/gallery">Bildergalerie</a></span> <span class="menuitem "><a class="nav" href="/user/help">Hilfe</a></span> <span class="menuitem "><a class="nav" href="/user/login">Login</a></span>
+  </span>
+  
+
+  <br class="clear" />
+</div>
+</div>
+  <div id="content">
+    <div class="CodeRay"><div class="code notranslate"><table><tr><td><div><pre>
+<span style="color:#888">; ******************************************************************</span>
+<span style="color:#888">;    L C D    D I S P L A Y    R O U T I N E S</span>
+<span style="color:#888">; ******************************************************************</span>
+<span style="color:#888">;</span>
+<span style="color:#888">;   Interfaces the AVR '8515 microcontroller with LCDs controlled</span>
+<span style="color:#888">;   by the Samsung KS0066U (and similiar) LCD driver.</span>
+<span style="color:#888">;</span>
+<span style="color:#888">;   Author:   Adam Swann &lt;adam@velocity2.com&gt;</span>
+<span style="color:#888">;   Homepage: http://www.velocity2.com/~adam/</span>
+<span style="color:#888">;</span>
+<span style="color:#888">;   The code below is fairly straightforward and well-documented.</span>
+<span style="color:#888">;   See my Web site or e-mail me if you need further instructions.</span>
+<span style="color:#888">;</span>
+<span style="color:#888">;   I used an 8515 at 4 MHz.  My LCD is Jameco Part #171715.</span>
+<span style="color:#888">;</span>
+<span style="color:#888">;   I wired the LCD display as follows (onto Port C)</span>
+<span style="color:#888">;     AVR   LCD</span>
+<span style="color:#888">;      0 --&gt; no connection</span>
+<span style="color:#888">;      1 --&gt; Enable on LCD</span>
+<span style="color:#888">;      2 --&gt; R/W on LCD</span>
+<span style="color:#888">;      3 --&gt; RS on LCD</span>
+<span style="color:#888">;      4 --&gt; Data4</span>
+<span style="color:#888">;      5 --&gt; Data5</span>
+<span style="color:#888">;      6 --&gt; Data6</span>
+<span style="color:#888">;      7 --&gt; Data7</span>
+<span style="color:#888">;</span>
+<span style="color:#888">;   References: (URLs may be wrapped)</span>
+<span style="color:#888">;    o KS0066U Datasheet &lt;http://www.usa.samsungsemi.com/</span>
+<span style="color:#888">;                          products/summary/charlcd/ks0066u.htm&gt;</span>
+<span style="color:#888">;</span>
+<span style="color:#888">; ******************************************************************</span>
+
+<span style="color:#888">; *** LCD_Init: Routine to initialize the LCD.</span>
+<span style="color:#970;font-weight:bold">LCD_Init:</span>  push  Temp
+
+    ldi  DelayTime, <span style="color:#00D;font-weight:bold">255</span>
+
+    <span style="color:#888">; Put the LCD in 8-bit mode.  Even though we want the display to</span>
+    <span style="color:#888">; operate in 4-bit mode, the only way to guarantee that our commands</span>
+    <span style="color:#888">; are aligned properly is to initialize in 8-bit.  (The user might have</span>
+    <span style="color:#888">; hit reset between nibbles of a dual 4-bit cycle.)</span>
+    ldi  Temp, <span style="color:#00D;font-weight:bold">0b00110000</span>
+    out  LCD_PORT, Temp
+    rcall  LCD_PulseE
+
+    rcall  DELAY
+    rcall  DELAY
+
+    <span style="color:#888">; Now it's safe to go into 4-bit mode.</span>
+    ldi  Temp, <span style="color:#00D;font-weight:bold">0b00100000</span>
+    out  LCD_PORT, Temp
+    rcall  LCD_PulseE
+
+    rcall   DELAY
+    rcall  DELAY
+
+    <span style="color:#888">; *** Send the 'FUNCTION SET' command</span>
+    <span style="color:#888">;       +------ Data:  0 = 4-bit; 1 = 8-bit</span>
+    <span style="color:#888">;       |+----- Lines: 0 = 1; 1 = 2</span>
+    <span style="color:#888">;       ||+---- Font:  0 = 5x8; 1 = 5x11</span>
+    ldi  Temp, <span style="color:#00D;font-weight:bold">0b00101100</span>
+    rcall   LCD_SendCmd
+
+    <span style="color:#888">; *** Send the 'CURSOR/DISPLAY SHIFT' command</span>
+    <span style="color:#888">;        +----- S/C:  0 = cursor; 1 = display</span>
+    <span style="color:#888">;        |+---- R/L:  0 = left; 1 = right</span>
+    ldi  Temp, <span style="color:#00D;font-weight:bold">0b00010100</span>
+    rcall   LCD_SendCmd
+
+    <span style="color:#888">; *** Send the 'DISPLAY ON/OFF' command</span>
+    <span style="color:#888">;         +---- Display: 0 = off; 1 = on</span>
+    <span style="color:#888">;         |+--- Cursor: 0 = off; 1 = on</span>
+    <span style="color:#888">;         ||+-- Blink: 0 = off; 1 = on</span>
+    ldi  Temp, <span style="color:#00D;font-weight:bold">0b00001100</span>
+    rcall   LCD_SendCmd
+
+    <span style="color:#888">; *** Send the 'ENTRY MODE' command</span>
+    <span style="color:#888">;          +--- Direction: 0 = left; 1 = right</span>
+    <span style="color:#888">;          |+-- Shift Dislay: 0 = off; 1 = on</span>
+    ldi  Temp, <span style="color:#00D;font-weight:bold">0b00000110</span>
+    rcall   LCD_SendCmd
+
+    rcall   LCD_Clear
+
+    pop   Temp
+    ret
+
+<span style="color:#888">; *** LCD_PrintMem: Prints from memory.</span>
+<span style="color:#888">;       Put the starting memory location in Z (r31:r30)</span>
+<span style="color:#888">;       Put the number of characters to print in Temp2</span>
+<span style="color:#888">;  After execution, Z is at the character AFTER the last to be printed</span>
+<span style="color:#888">;                   and Temp2 is zero.</span>
+<span style="color:#888">;       This function will not wrap if you the string is bigger than the LCD.</span>
+
+<span style="color:#970;font-weight:bold">LCD_PrintMem:</span>  push  Temp
+
+   <span style="color:#970;font-weight:bold">LCD_MemRead:</span> ld  Temp, Z+
+    rcall  LCD_SendChar
+    dec  Temp2
+    brne  LCD_MemRead
+
+    pop  Temp
+    ret
+
+<span style="color:#888">; *** LCD_PrintEE: Prints from EEPROM</span>
+<span style="color:#888">;LCD_PrintEE:  push  Temp</span>
+<span style="color:#888">;</span>
+ <span style="color:#888">;   LCD_EERead: sbic   EECR, EEWE   ; Wait for EEWE to clear</span>
+<span style="color:#888">;    rjmp   LCD_EERead</span>
+<span style="color:#888">;</span>
+<span style="color:#888">;    out   EEARH, r31   ;output address high byte, remove if no high byte exist</span>
+<span style="color:#888">;    out   EEARL, r30   ;output address low byte</span>
+<span style="color:#888">;</span>
+<span style="color:#888">;    sbi   EECR, EERE   ;set EEPROM Read strobe</span>
+<span style="color:#888">;    in   Temp, EEDR   ;get data</span>
+<span style="color:#888">;</span>
+<span style="color:#888">;    rcall  LCD_SendChar</span>
+<span style="color:#888">;</span>
+<span style="color:#888">;    dec  Temp2</span>
+<span style="color:#888">;    brne  LCD_EERead</span>
+<span style="color:#888">;</span>
+<span style="color:#888">;    pop  Temp</span>
+<span style="color:#888">;    ret</span>
+
+<span style="color:#888">; *** LCD_PrintPM: Prints from program memory</span>
+<span style="color:#970;font-weight:bold">LCD_PrintPM:</span>  push  <span style="color:#038;font-weight:bold">r0</span>
+    push  Temp
+
+    <span style="color:#970;font-weight:bold">LCD_PMRead:</span> lpm
+        mov  Temp, <span style="color:#038;font-weight:bold">r0</span>
+    rcall  LCD_SendChar
+    adiw  <span style="color:#038;font-weight:bold">r30</span>, <span style="color:#00D;font-weight:bold">1</span>
+    dec  Temp2
+    brne  LCD_PMRead
+
+    pop  Temp
+    pop  <span style="color:#038;font-weight:bold">r0</span>
+    ret
+
+
+
+<span style="color:#888">; *** LCD_Clear: Clears the display and sends the cursor home.</span>
+
+<span style="color:#970;font-weight:bold">LCD_Clear:</span>  push   Temp
+
+    <span style="color:#888">; *** Clear the display</span>
+    ldi  Temp, <span style="color:#00D;font-weight:bold">0b00000001</span>
+    rcall   LCD_SendCmd
+
+    <span style="color:#888">; *** Send the cursor home</span>
+    ldi  Temp, <span style="color:#00D;font-weight:bold">0b00000010</span>
+    rcall   LCD_SendCmd
+
+    pop  Temp
+    ret
+
+<span style="color:#888">; *** LCD_SendCmd: Routine to write a command to the instruction register.</span>
+<span style="color:#888">;       The value to be written should be stored in Temp.</span>
+<span style="color:#888">;       The value is sent 4 bits at a time.</span>
+
+<span style="color:#970;font-weight:bold">LCD_SendCmd:</span>  push   Temp
+    push   Temp2
+
+    rcall  LCD_WaitBusy
+
+    mov   Temp2, Temp    <span style="color:#888">; Make a backup copy</span>
+    andi   Temp2, <span style="color:#00D;font-weight:bold">0b11110000</span>  <span style="color:#888">; Only use the upper nibble</span>
+    out  LCD_PORT, Temp2    <span style="color:#888">; Send it</span>
+    rcall   LCD_PulseE    <span style="color:#888">; Pulse the enable</span>
+
+    swap  Temp      <span style="color:#888">; Swap upper/lower nibble</span>
+    andi   Temp, <span style="color:#00D;font-weight:bold">0b11110000</span>  <span style="color:#888">; Only use the upper nibble</span>
+    out  LCD_PORT, Temp    <span style="color:#888">; Send it</span>
+    rcall   LCD_PulseE    <span style="color:#888">; Pulse the enable</span>
+
+    pop   Temp2
+    pop   Temp
+    ret
+<span style="color:#888">; *** LCD_SendChar: Routine to write a character to the data register.</span>
+<span style="color:#888">;       The value to be written should be stored in Temp.</span>
+<span style="color:#888">;       The value is sent 4 bits at a time.</span>
+
+<span style="color:#970;font-weight:bold">LCD_SendChar:</span>  push   Temp
+    push   Temp2
+
+    mov   Temp2, Temp    <span style="color:#888">; Make a backup copy</span>
+    rcall  LCD_WaitBusy
+    mov   Temp, Temp2    <span style="color:#888">; Make a backup copy</span>
+
+    andi   Temp2, <span style="color:#00D;font-weight:bold">0b11110000</span>  <span style="color:#888">; Only use the upper nibble</span>
+    ori  Temp2,  <span style="color:#00D;font-weight:bold">0b00001000</span>
+    out  LCD_PORT, Temp2    <span style="color:#888">; Send it</span>
+    rcall   LCD_PulseE    <span style="color:#888">; Pulse the enable</span>
+
+    swap  Temp      <span style="color:#888">; Swap upper/lower nibble</span>
+    andi   Temp,  <span style="color:#00D;font-weight:bold">0b11110000</span>  <span style="color:#888">; Only use the upper nibble</span>
+    ori  Temp,  <span style="color:#00D;font-weight:bold">0b00001000</span>
+    out  LCD_PORT, Temp    <span style="color:#888">; Send it</span>
+    rcall   LCD_PulseE    <span style="color:#888">; Pulse the enable</span>
+
+    pop   Temp2
+    pop   Temp
+    ret
+
+<span style="color:#888">; *** LCD_WaitBusy: Wait for the busy flag to go low.</span>
+<span style="color:#888">;       Waits for the busy flag to go low.  Since we're in 4-bit mode,</span>
+<span style="color:#888">;       the register has to be read twice (for a total of 8 bits).  The</span>
+<span style="color:#888">;       second read is never used.</span>
+<span style="color:#888">;       If you need more code space, this function could be replaced with</span>
+<span style="color:#888">;       a simple delay.</span>
+
+<span style="color:#970;font-weight:bold">LCD_WaitBusy:</span>  push   Temp
+
+    ldi  Temp, <span style="color:#00D;font-weight:bold">0b00001111</span>  <span style="color:#888">; Disable data bit outputs</span>
+    out  LCD_DDR, Temp
+
+    ldi  Temp, <span style="color:#00D;font-weight:bold">0x00</span>    <span style="color:#888">; Clear all outputs</span>
+    out  LCD_PORT, Temp
+
+<span style="color:#970;font-weight:bold">LCDWaitLoop:</span>  ldi  Temp, <span style="color:#00D;font-weight:bold">0b00000100</span>  <span style="color:#888">; Enable only read bit</span>
+    out  LCD_PORT, Temp
+    sbi  LCD_PORT, LCD_E    <span style="color:#888">; Raise the Enable signal.</span>
+    nop
+    nop
+    in  Temp, LCD_PIN    <span style="color:#888">; Read the current values</span>
+    cbi  LCD_PORT, LCD_E    <span style="color:#888">; Disable the enable signal.</span>
+    rcall   LCD_PulseE    <span style="color:#888">; Pulse the enable (the second nibble is discarded)</span>
+    sbrc  Temp, <span style="color:#00D;font-weight:bold">7</span>      <span style="color:#888">; Check busy flag</span>
+    rjmp  LCDWaitLoop
+
+    ldi  Temp, <span style="color:#00D;font-weight:bold">0b11111111</span>  <span style="color:#888">; Enable all outputs</span>
+    out  LCD_DDR, Temp
+
+    pop  Temp
+    ret
+
+<span style="color:#970;font-weight:bold">LCD_PulseE:</span>  sbi  LCD_PORT, LCD_E
+    nop
+    nop
+    cbi  LCD_PORT, LCD_E
+    ret
+
+<span style="color:#888">; *** Provide millisecond delay (DelayTicks specifies number of ms)</span>
+<span style="color:#970;font-weight:bold">DELAY:</span>  push DelayTime
+  push <span style="color:#038;font-weight:bold">r25</span>
+
+  ldi  <span style="color:#038;font-weight:bold">r25</span>, DelayCount1
+
+<span style="color:#970;font-weight:bold">DELAY1:</span>  dec <span style="color:#038;font-weight:bold">r25</span>
+  brne DELAY1
+  dec DelayTime
+  brne DELAY1
+
+  pop <span style="color:#038;font-weight:bold">r25</span>
+  pop DelayTime
+  ret
+
+</pre></div></td></tr></table></div></div>
+
+  </div>
+  <div id="nav-bottom"><div class="navbar">
+  <span class="left">
+    <span class="menuitem "><a class="nav" href="/forum">Forenliste</a></span> <span class="menuitem "><a class="nav" href="/topic/new">Neuer Beitrag</a></span> <span class="menuitem "><a class="nav" href="/search">Suchen</a></span> <span class="menuitem "><a class="nav" href="/user/register">Anmelden</a></span> <span class="menuitem "><a class="nav" href="/user/list">Benutzerliste</a></span> <span class="menuitem "><a class="nav" href="/attachment/gallery">Bildergalerie</a></span> <span class="menuitem "><a class="nav" href="/user/help">Hilfe</a></span> <span class="menuitem "><a class="nav" href="/user/login">Login</a></span>
+  </span>
+  
+
+  <br class="clear" />
+</div>
+</div>
+    <!-- google_ad_section_end -->
+    <!-- contentDetection end --> 
+
+
+</div>
+
+  </td>
+<style type="text/css">
+@media screen and (min-width: 1250px) {
+  #sidebar-right {
+    display: table-cell;
+  }
+	#outer-container {
+		max-width: 1250px;
+	}
+}
+
+@media screen and (min-width: 1500px) {
+  #sidebar-right {
+    display: table-cell;
+		width: 312px;
+	}
+  #outer-container {
+    max-width: 1390px;
+  }
+}
+</style>
+
+<td id="sidebar-right" class="sidebar">
+<div class="nav-container">
+ <ul class="nav-first">
+<li class=""><a href="/forum">Forenliste</a></li> <li class=""><a href="/topic/new">Neuer Beitrag</a></li> <li class=""><a href="/search">Suchen</a></li> <li class=""><a href="/user/list">Benutzerliste</a></li> <li class=""><a href="/attachment/gallery">Bildergalerie</a></li> <li class=""><a href="/user/help">Hilfe</a></li> <li class=""><a href="/user/register">Anmelden</a></li>
+  <li>
+  <ul>
+  <li class=""><a href="/user/login">Login</a></li>
+  </ul>
+  </li>
+</ul>
+</div>
+
+<hr />
+<div style="padding: 0; text-align: center; width: 160px;" class="sticky">
+<script type="text/javascript">document.write(decodeURIComponent('%3Cdiv%20class=%22ad%22%20style=%22min-width:%201px;%22id=%22div-gpt-ad-jutmalxk%22%3E%3C/div%3E'));googletag.cmd.push(function() {if ($("#div-gpt-ad-jutmalxk").is(":hidden")) return;slot = googletag.defineSlot('/62616433/Mikrocontroller_Right_Sidebar_1', [160, 600], 'div-gpt-ad-jutmalxk');dfpRightSidebarSizeMapping = googletag.sizeMapping().
+  addSize([1500, 500], [300, 250]).
+  addSize([0, 0], [160, 600]). // default: wide skyscraper
+  build();slot.defineSizeMapping(dfpRightSidebarSizeMapping);slot.addService(googletag.pubads());slot.set('adsense_channel_ids', '4944964942,5705809182+1675723313');
+slot.set('adsense_border_color', '0066cc');
+slot.set('adsense_background_color', 'c3d9ff');
+slot.set('adsense_link_color', '0000ff');
+slot.set('adsense_url_color', '0000ff');
+slot.set('adsense_text_color', '000000');
+googletag.enableServices();googletag.display('div-gpt-ad-jutmalxk');
+});</script>
+</div>
+</td>
+  </tr>
+  </table>
+
+    <div id="bottom">
+  <div id="impress">
+    <a href="/contact">Kontakt/Impressum</a> – <a href="/user/conditions">Nutzungsbedingungen</a> – <a href="mailto:info@eetech.com?subject=Advertising on Mikrocontroller.net">Werbung auf Mikrocontroller.net</a>
+  </div>
+  <div id="powered">
+<!--    powered by Ruby on Rails -->
+  </div>
+ <a href="/util/rb"><!-- nothing --></a>
+</div>
+
+</div> <!-- outer-container -->
+<script type="text/javascript">document.write(decodeURIComponent('%3Cdiv%20class=%22ad%22%20style=%22min-width:%201px;%22id=%22div-gpt-ad-amcerszh%22%3E%3C/div%3E'));googletag.cmd.push(function() {if ($("#div-gpt-ad-amcerszh").is(":hidden")) return;slot = googletag.defineSlot('/62616433/Mikrocontroller_Pixel', [1, 1], 'div-gpt-ad-amcerszh');slot.addService(googletag.pubads());slot.set('adsense_channel_ids', '6234123075');
+slot.set('adsense_border_color', 'ffa500');
+slot.set('adsense_background_color', 'ffffff');
+slot.set('adsense_link_color', '0000ff');
+slot.set('adsense_url_color', '0000ff');
+slot.set('adsense_text_color', '333333');
+googletag.enableServices();googletag.display('div-gpt-ad-amcerszh');
+});</script>
+</body>
+</html>
